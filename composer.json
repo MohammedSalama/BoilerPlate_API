@@ -18,6 +18,7 @@
         "laravel/sail": "^1.24.1",
         "mockery/mockery": "^1.6.6",
         "nunomaduro/collision": "^7.8.1",
+        "nunomaduro/larastan": "^2.6",
         "pestphp/pest": "^2.18",
         "pestphp/pest-plugin-laravel": "^2.2",
         "spatie/laravel-ignition": "^2.3"
@@ -47,6 +48,15 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "pint": [
+            "./vendor/bin/pint"
+        ],
+        "stan": [
+            "./vendor/bin/phpstan analyse"
+        ],
+        "test": [
+            "@php artisan test"
         ]
     },
     "extra": {
