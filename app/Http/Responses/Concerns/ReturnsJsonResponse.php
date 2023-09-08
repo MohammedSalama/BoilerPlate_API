@@ -1,11 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Responses\Concerns;
 
 use Illuminate\Http\JsonResponse;
 use JustSteveKing\StatusCode\Http;
 use Symfony\Component\HttpFoundation\Response;
-
 
 /**
  * @property-read array $data
@@ -20,7 +21,8 @@ trait ReturnsJsonResponse
     public function __construct(
         private readonly array $data,
         private readonly Http $status = Http::OK
-    ){}
+    ) {
+    }
 
     public function toResponse($request): Response
     {

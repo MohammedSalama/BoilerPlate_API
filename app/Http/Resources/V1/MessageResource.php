@@ -13,10 +13,9 @@ use Illuminate\Http\Resources\Json\JsonResource;
  */
 final class MessageResource extends JsonResource
 {
-
     public function toArray(Request $request): array
     {
-//        dd($this->resource['message']);
+        //        dd($this->resource['message']);
         return [
             'message' => $this->resource['message'],
         ];

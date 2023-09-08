@@ -17,4 +17,3 @@ use Tests\TestCase;
 */
 
 uses(TestCase::class, LazilyRefreshDatabase::class)->in(__DIR__);
-

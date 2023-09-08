@@ -9,7 +9,6 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
-use phpDocumentor\Reflection\Types\Static_;
 
 final class RouteServiceProvider extends ServiceProvider
 {
@@ -20,10 +19,11 @@ final class RouteServiceProvider extends ServiceProvider
     {
         RateLimiter::for(
             'api',
-            Static fn (Request $request): Limit =>
+            static fn (Request $request): Limit =>
              Limit::perMinute(
-                 60)->by(
-                     $request->user()?->id ?: $request->ip(),
+                 60
+             )->by(
+                 $request->user()?->id ?: $request->ip(),
              )
         );
 

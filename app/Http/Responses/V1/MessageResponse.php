@@ -7,7 +7,6 @@ namespace App\Http\Responses\V1;
 use App\Http\Responses\Concerns\ReturnsJsonResponse;
 use Illuminate\Contracts\Support\Responsable;
 
-
 final class MessageResponse implements Responsable
 {
     use ReturnsJsonResponse;
