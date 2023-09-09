@@ -10,14 +10,12 @@ use Illuminate\Http\Request;
 
 final class ShowController
 {
-    /**
-     * Handle the incoming request.
-     */
     public function __invoke(Request $request): Responsable
     {
         return new MessageResponse(
-            data: [
-                'message' => (string) trans('messages.service.online'),
+            data:
+            [
+                'message' => strval(trans('messages.service.online')),
             ],
         );
 
