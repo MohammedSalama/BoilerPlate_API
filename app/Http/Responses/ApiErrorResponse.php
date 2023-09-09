@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Responses;
 
 use App\Enum\Error;
@@ -15,7 +17,8 @@ final class ApiErrorResponse implements Responsable
         private readonly string $description,
         private readonly Error $code,
         private readonly Http $status = Http::INTERNAL_SERVER_ERROR
-    ) {}
+    ) {
+    }
 
     public function toResponse($request): Response
     {

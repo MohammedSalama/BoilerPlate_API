@@ -23,7 +23,7 @@ final class JsonApiResponseMiddleware
         $response = $next($request);
 
         $response->headers->set(
-            'Content-Type' ,
+            'Content-Type',
             'application/vnd.api+json',
         );
 

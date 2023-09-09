@@ -26,7 +26,7 @@ final class Handler extends ExceptionHandler
     public function register(): void
     {
         $this->reportable(function (Throwable $e) {
-//            dd($e);
+            //            dd($e);
         });
     }
 }
